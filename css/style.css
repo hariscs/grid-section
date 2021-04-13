@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13px;
+	margin: 0;
+	background: hsl(210, 46%, 95%);
+	color: hsl(210, 46%, 95%);
+}
+img {
+	max-width: 100%;
+	width: 13%;
+}
+.container {
+	display: grid;
+	gap: 2.5em;
+	max-width: 1400px;
+	width: 90%;
+	margin: 6em auto;
+}
+.card {
+	border-radius: 10px;
+	padding: 3em;
+}
+
+.intro-container {
+	display: flex;
+	align-items: center;
+}
+.intro-img {
+	border: 3px solid hsl(263, 54%, 65%);
+	border-radius: 100vh;
+	margin-right: 1.5em;
+}
+h1,
+h2 {
+	font-weight: 500;
+}
+.intro,
+h2,
+h3,
+p {
+	margin: 0;
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+}
+.name {
+	font-weight: 500;
+}
+.intro .verified {
+	opacity: 50%;
+}
+.header-text {
+	margin: 0.5em auto;
+}
+.header-review {
+	line-height: 1.4;
+	font-size: 1rem;
+	opacity: 70%;
+}
+.card-1 {
+	background: hsl(263, 55%, 52%);
+	background-image: url('/images/bg-pattern-quotation.svg');
+	background-repeat: no-repeat;
+	background-size: 35%;
+	background-position: top right 2em;
+	color: hsl(0, 0%, 100%);
+}
+.card-2 {
+	background: hsl(217, 19%, 35%);
+}
+.card-3 {
+	background: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+}
+.card-4 {
+	background: hsl(219, 29%, 14%);
+}
+.card-5 {
+	background: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+}
