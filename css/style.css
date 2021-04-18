@@ -21,18 +21,23 @@ body {
 
 .container {
 	display: grid;
-	gap: 2.5em;
-	max-width: 75rem;
-	width: 80%;
-	margin: 0 auto;
-	/* max-height: 100vh; */
-	/* max-width: 700px;
-	width: 90%;
-	margin: 0 auto; */
+	max-width: 700px;
+	width: 85%;
+	margin: 2.5em auto;
+	gap: 1.5em;
+	background: purple;
+	grid-auto-flow: dense;
 }
+
 .card {
 	border-radius: 10px;
-	padding: 3em;
+	padding: 1em 1.5em;
+}
+
+
+/* .card {
+	border-radius: 10px;
+	padding: 1em 1.5em;
 }
 
 .intro-container {
@@ -93,10 +98,10 @@ p {
 .card-5 {
 	background: hsl(0, 0%, 100%);
 	color: hsl(217, 19%, 35%);
-}
+} */
 
 /* Media Query */
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
 	.container {
 		max-width: 1400px;
 		grid-template-columns: repeat(2, 1fr);
@@ -120,4 +125,4 @@ p {
 	.card-5 {
 		grid-area: kira;
 	}
-}
+} */
