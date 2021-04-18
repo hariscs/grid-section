@@ -10,11 +10,12 @@
 :root {
 	--bg: hsl(210, 46%, 95%);
 	--color: hsl(210, 46%, 95%);
+	--intro-img: hsl(263, 54%, 65%)
 }
 
 body {
 	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 1.3rem;
+	font-size: 13px;
 	background: var(--bg);
 	color: var(--color);
 }
@@ -25,64 +26,57 @@ body {
 	width: 85%;
 	margin: 2.5em auto;
 	gap: 1.5em;
-	background: purple;
 	grid-auto-flow: dense;
 }
 
 .card {
 	border-radius: 10px;
-	padding: 1em 1.5em;
-}
-
-
-/* .card {
-	border-radius: 10px;
-	padding: 1em 1.5em;
+	padding: 2em 1.5em;
+	box-shadow: 0px 4px 3px rgba(0, 0, 0, .1)
 }
 
 .intro-container {
 	display: flex;
-	align-items: center;
+	align-items: center
 }
+
 .intro-img {
-	border: 3px solid hsl(263, 54%, 65%);
+	border: 3px solid var(--intro-img);
 	border-radius: 100vh;
-	margin-right: 1.5em;
+	margin-right: 1em;
 }
+
 h1,
 h2 {
 	font-weight: 500;
 }
-.intro,
-h2,
-h3,
-p {
-	margin: 0;
-}
-.intro {
-	display: flex;
-	flex-direction: column;
-}
+
 .name {
 	font-weight: 500;
 }
 .intro .verified {
-	opacity: 50%;
+	opacity: .5;
 }
+
+
 .header-text {
-	margin: 0.5em auto;
+	margin: 1em 0;
+	font-size: 1.6rem;
 }
+
 .header-review {
-	line-height: 1.4;
-	font-size: 1rem;
 	opacity: 70%;
+	line-height: 1.4;
 }
+
 .card-1 {
 	background: hsl(263, 55%, 52%);
 	background-image: url('/images/bg-pattern-quotation.svg');
 	background-repeat: no-repeat;
 	background-size: 35%;
-	background-position: top right 2em;
+	background-position: top right;
+	 background-origin: content-box;
+	appearance: none;
 	color: hsl(0, 0%, 100%);
 }
 .card-2 {
@@ -98,31 +92,84 @@ p {
 .card-5 {
 	background: hsl(0, 0%, 100%);
 	color: hsl(217, 19%, 35%);
-} */
+}
 
-/* Media Query */
-/* @media (min-width: 900px) {
+@media (min-width: 768px) {
 	.container {
 		max-width: 1400px;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas:
-			'daniel daniel jonathan kira'
-			'jean patric patric kira';
-		margin: 1em auto;
 	}
+
+	.header-review{
+		font-size: 1.3rem;
+	}
+
+	.name {
+		font-size: 1.75rem
+	}
+
+	.verified{
+		font-size: 1.3rem
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "daniel daniel jonathan"
+			"jean patrick kira"
+		;
+	}
+
 	.card-1 {
-		grid-area: daniel;
+		grid-area: daniel
 	}
 	.card-2 {
-		grid-area: jonathan;
+		grid-area: jonathan
 	}
 	.card-3 {
-		grid-area: jean;
+		grid-area: jean
 	}
 	.card-4 {
-		grid-area: patric;
+		grid-area: patrick
 	}
 	.card-5 {
-		grid-area: kira;
+		grid-area: kira
 	}
-} */
+}
+
+@media (min-width: 1400px) {
+	body  {
+		overflow: hidden;
+	}
+	.container {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: "daniel daniel jonathan kira"
+			"jean patric patric kira";
+		;
+		margin: 15vh auto;
+	}
+
+	.card-1 {
+		grid-area: daniel
+	}
+	.card-2 {
+		grid-area: jonathan
+	}
+	.card-3 {
+		grid-area: jean
+	}
+	.card-4 {
+		grid-area: patric
+	}
+	.card-5 {
+		grid-area: kira
+	}
+	.attribution {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		font-size: 2rem !important;
+	}
+}
